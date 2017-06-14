@@ -3,9 +3,6 @@ package ts.daoImpl;
 import ts.daoBase.BaseDao;
 import ts.model.Airport;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by wr on 2017/6/13.
  */

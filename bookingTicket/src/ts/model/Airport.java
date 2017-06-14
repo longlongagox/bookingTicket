@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 /**
- * Created by wr on 2017/6/13.
+ * Created by wr on 2017/6/14.
  */
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
@@ -17,8 +17,8 @@ public class Airport implements Serializable{
     private static final long serialVersionUID = -3267943602377867497L;
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(generator="MODEL_AIRPORT")
-    @org.hibernate.annotations.GenericGenerator(name="MODEL_AIRPORT", strategy="native")
+    @GeneratedValue(generator="MODEL_airport")
+    @org.hibernate.annotations.GenericGenerator(name="MODEL_airport", strategy="native")
     public Integer getId() {
         return id;
     }
@@ -28,7 +28,7 @@ public class Airport implements Serializable{
     }
 
     @Basic
-    @Column(name = "name", nullable = true, length = 254)
+    @Column(name = "name", nullable = false, length = 254)
     public String getName() {
         return name;
     }

@@ -31,6 +31,6 @@
         <mapping class="ts.model.Company"/>
         <mapping class="ts.model.Flight"/>
         <mapping class="ts.model.Passenger"/>
-        <mapping class="ts.model.Seat"/>
+        <mapping class="ts.model.History"/>
     </session-factory>
 </hibernate-configuration>

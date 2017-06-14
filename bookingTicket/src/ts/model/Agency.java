@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 /**
- * Created by wr on 2017/6/13.
+ * Created by wr on 2017/6/14.
  */
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
@@ -21,8 +21,8 @@ public class Agency implements Serializable {
     private static final long serialVersionUID = -3267943602377867497L;
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(generator="MODEL_AGENCY")
-    @org.hibernate.annotations.GenericGenerator(name="MODEL_AGENCY", strategy="native")
+    @GeneratedValue(generator="MODEL_agency")
+    @org.hibernate.annotations.GenericGenerator(name="MODEL_agency", strategy="native")
     public Integer getId() {
         return id;
     }
@@ -32,7 +32,7 @@ public class Agency implements Serializable {
     }
 
     @Basic
-    @Column(name = "pwd", nullable = true, length = 254)
+    @Column(name = "pwd", nullable = false, length = 254)
     public String getPwd() {
         return pwd;
     }
@@ -42,7 +42,7 @@ public class Agency implements Serializable {
     }
 
     @Basic
-    @Column(name = "name", nullable = true, length = 254)
+    @Column(name = "name", nullable = false, length = 254)
     public String getName() {
         return name;
     }
@@ -72,7 +72,7 @@ public class Agency implements Serializable {
     }
 
     @Basic
-    @Column(name = "phone", nullable = true, length = 254)
+    @Column(name = "phone", nullable = false, length = 254)
     public String getPhone() {
         return phone;
     }

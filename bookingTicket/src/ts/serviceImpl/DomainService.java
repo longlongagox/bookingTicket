@@ -1,11 +1,9 @@
 package ts.serviceImpl;
 
 import ts.daoImpl.AirportDAO;
-import ts.model.Airport;
 import ts.serviceInterface.IDomainService;
 
 import javax.ws.rs.core.Response;
-import java.util.List;
 
 /**
  * Created by wr on 2017/6/13.

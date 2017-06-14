@@ -2,26 +2,25 @@ package ts.model;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.io.Serializable;
 
 /**
- * Created by wr on 2017/6/13.
+ * Created by wr on 2017/6/14.
  */
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
 @Table(name = "passenger", schema = "ticketorder", catalog = "")
 @XmlRootElement(name = "passenger")
-public class Passenger implements Serializable {
+public class Passenger {
     private Integer id;
     private String sex;
     private String name;
     private String idcard;
     private String phone;
-    private static final long serialVersionUID = -3267943602377867497L;
+
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(generator="MODEL_PASSENGER")
-    @org.hibernate.annotations.GenericGenerator(name="MODEL_PASSENGER", strategy="native")
+    @GeneratedValue(generator="MODEL_passenger")
+    @org.hibernate.annotations.GenericGenerator(name="MODEL_passenger", strategy="native")
     public Integer getId() {
         return id;
     }
@@ -41,7 +40,7 @@ public class Passenger implements Serializable {
     }
 
     @Basic
-    @Column(name = "name", nullable = true, length = 254)
+    @Column(name = "name", nullable = false, length = 254)
     public String getName() {
         return name;
     }
@@ -51,7 +50,7 @@ public class Passenger implements Serializable {
     }
 
     @Basic
-    @Column(name = "idcard", nullable = true, length = 254)
+    @Column(name = "idcard", nullable = false, length = 254)
     public String getIdcard() {
         return idcard;
     }
@@ -61,7 +60,7 @@ public class Passenger implements Serializable {
     }
 
     @Basic
-    @Column(name = "phone", nullable = true, length = 254)
+    @Column(name = "phone", nullable = false, length = 254)
     public String getPhone() {
         return phone;
     }
